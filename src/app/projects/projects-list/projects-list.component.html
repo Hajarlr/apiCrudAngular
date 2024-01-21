@@ -1,0 +1,27 @@
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Libelle</th>
+        <th>Description</th>
+        <th>Nombre de jours </th>
+        <th>date debut</th>
+        <th>date fin</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let projet of projects">
+        <td>{{projet.Id}}</td>
+        <td>{{projet.Libelle}}</td>
+        <td>{{projet.Description}}</td>
+        <td>{{projet.SprintDays}}</td>
+        <td>{{projet.DateDebut | date:"dd-MM-yyyy" }} </td>
+        <td>{{projet.DateFin | date:"dd-MM-yyyy"}}</td>
+        <td>
+            <a class="btn btn-warning mx-1"[routerLink]="'/project/update/' +projet.Id"><i class="fa-solid fa-pencil"></i></a>
+            <button class="btn btn-danger mx-1"(click)="remove(projet.Id)"><i class="fa-solid fa-trash"></i></button>
+        </td>
+    </tr>
+</tbody>
+</table>

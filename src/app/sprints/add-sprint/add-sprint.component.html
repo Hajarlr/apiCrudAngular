@@ -1,0 +1,25 @@
+<div class="form-group">
+    <label for="">Id</label>
+    <input type="number" class="form-control" [(ngModel)]="sprint.Id">
+    </div>
+    <div class="form-group">
+        <label for="">SprintName</label>
+        <input  class="form-control" [(ngModel)]="sprint.SprintName">
+     </div>
+     <div class="form-group">
+        <label for="">SprintGoal</label>
+        <textarea class="form-control" [(ngModel)]="sprint.SprintGoal"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="">DateDebut</label>
+        <input type="date" class="form-control" [(ngModel)]="sprint.DateDebut">
+    </div>
+    <div class="form-group">
+        <label for="">Date debut</label>
+        <input type="date" class="form-control" [(ngModel)]="sprint.DateFin">
+    </div>
+    <div class="form-group">
+        <label for="">ProjetId</label>
+        <input type="number" class="form-control" [(ngModel)]="sprint.ProjetId">
+    </div>
+    <button class="btn btn-primary" (click)="add()">Ajouter</button>
